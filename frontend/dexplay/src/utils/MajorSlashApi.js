@@ -1,6 +1,6 @@
 // utils/fetchAllData.js
 export async function fetchAllData() {
-  const res = await fetch("http://localhost:3000/");
+  const res = await fetch("https://cinescope-ncpj.onrender.com/");
   if (!res.ok) {
     throw new Error("Failed to fetch movie data");
   }

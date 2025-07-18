@@ -49,7 +49,7 @@ export default function InDetail() {
         );
 
     React.useEffect(() => {
-           fetch('http://localhost:3000/')
+           fetch('https://cinescope-ncpj.onrender.com/')
              .then(response => {
                if (!response.ok) {
                  throw new Error('Network response was not ok');

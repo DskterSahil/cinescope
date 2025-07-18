@@ -29,7 +29,7 @@ export default function SearchPage() {
         setLoading(true);
 
         try {
-            const res = await fetch(`http://localhost:3000/search/${searchQuery}`);
+            const res = await fetch(`https://cinescope-ncpj.onrender.com/search/${searchQuery}`);
             if(!res.ok) {
                 throw new Error("Failed to fetch data");
             }
