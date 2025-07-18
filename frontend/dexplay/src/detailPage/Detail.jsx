@@ -21,7 +21,7 @@ export default function Detail() {
     const { type ,id } = useParams();
     
     React.useEffect(() => {
-        fetch(`https://cinescope-ncpj.onrender.com/${type}/${id}`)
+        fetch(`https://cinescope-ncpj.onrender.com/detail/${type}/${id}`)
             .then(res => res.json())
             .then(data => {
                 setDetails(data)
