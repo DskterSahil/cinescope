@@ -1,0 +1,37 @@
+
+
+.icon {
+  width: 30px;
+  padding: 0;
+  margin: 0;
+  
+}
+
+.extra-stroke {
+  stroke: #576B87;
+  stroke-width: 4px;
+}
+
+.extra-stroke:hover {
+  stroke: #FFD700 !important;
+  stroke-width: 5px;
+}
+
+.first-icon {
+  stroke: #576B87;
+  
+}
+
+.first-icon:hover {
+  stroke: #FFD700 !important;
+  stroke-width: 3px; 
+}
+
+.nav-active svg.first-icon {
+  fill: #FFD700 !important;
+  stroke: #FFD700 !important;
+}
+
+.nav-active svg.extra-stroke {
+  stroke: #FFD700 !important;
+}

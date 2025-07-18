@@ -1,0 +1,100 @@
+/* Remove body styles as they're now in App.css */
+
+.parent {
+    background-color: var(--background-dark);
+    padding: 40px 0; /* Remove horizontal padding */
+    display: block; /* Change to block */
+    width: 100%;
+    height: 70%;
+    position: relative;
+    margin-left: 30px;
+    box-sizing: border-box;
+}
+
+
+.image-frame {
+    background-color: var(--background-dark);
+    border-radius: 10px;
+    display: block;
+    width: 95%; /* Increased from 90% */
+    margin: 0 auto; /* Center the frame */
+    position: relative;
+}
+
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover; /* Prevent image distortion */
+    aspect-ratio: 16/6; /* Maintain cinematic ratio */
+}
+
+.movie-details {
+    text-align: center;
+    color: white;
+    background-color: black;
+    width: 480px;
+    padding: 10px;
+    border-radius: 30px;
+    position: absolute;
+    left: 50%;
+    bottom: 0; /* Position below image frame */
+    transform: translateX(-50%);
+    border: 15px solid var(--background-dark);
+    z-index: 1; /* Ensure it stays above other elements */
+}
+
+.movie-details::after,
+.movie-details::before {
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  background-color: transparent;
+  top: 47%; /* Vertical centering */
+  transform: translateY(-50%); /* Fine-tune vertical position */
+  border-radius: 100vw;
+  border: none;
+}
+
+.movie-details::before {
+  left: calc(2.9rem * -1); /* Half of dot width (1rem/2) to center on border */
+  border-radius: 0 0 100vw 0;
+  box-shadow: 7.5px 7.5px 0 7.5px var(--background-dark);
+  border: none;
+  
+}
+
+.movie-details::after {
+  right: calc(2.9rem * -1); /* Half of dot width (1rem/2) to center on border */
+  border-radius: 0 0 0 100vw;
+  box-shadow: -8px 8px 0 8px var(--background-dark);
+  border: none;
+}
+
+/* Rest of your existing styles */
+.movie-title { 
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
+
+.buttons_MovieCard .watch-btn,
+.buttons_MovieCard .detail-btn {
+    background-color: #ffcc00;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    color: black;
+}
+
+.buttons_MovieCard .watch-btn:hover,
+.buttons_MovieCard .detail-btn:hover {
+    background-color: #ffaa00;
+}
