@@ -7,10 +7,12 @@ import React from "react";
 import Card from "../searchPage/Card";
 import "./dashboard.css";
 import axios from "axios";
+import { useNavigate } from 'react-router-dom';
 
 export default function Dashboard() {
 // Example watchlist data. Replace with your real data or fetch.
 const token = localStorage.getItem('token')
+const navigate = useNavigate();
 const storedUserData = localStorage.getItem('userData');
 const userData = storedUserData ? JSON.parse(storedUserData) : null;
 const [userWatchlist, setUserWatchlist] = React.useState([
@@ -168,7 +170,7 @@ function handleLogout() {
   localStorage.removeItem('userData');
 
   // Redirect to login page
-  window.location.href = '/login';
+  navigate('/login');
 }
 
 
