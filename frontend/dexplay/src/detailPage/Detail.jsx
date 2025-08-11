@@ -113,7 +113,7 @@ console.log(year)
                     localStorage.removeItem('userData');
                     setIsLoggedIn(false);
                     setUserData(null);
-                    window.location.href = '/login';
+                    navigate('/login');
                 } else {
                     alert(`Failed: ${error.response.data.message || "Something went wrong."}`);
                 }
