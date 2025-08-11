@@ -1,8 +1,9 @@
 import express from 'express';
 import cors from 'cors';
 import homepageRoute from './routes/homepage.js';
-import authRoute from './routes/auth.js';
+import authRoute from './authenication/auth.js';
 import api from './api.js';
+import watchList from "./routes/watchlist.js";
 
 const app = express();
 
@@ -12,7 +13,10 @@ app.use(express.json()); // Parse JSON bodies
 
 // Routes
 app.use("/", homepageRoute);
-app.use("/api/auth", authRoute);
+app.use("/auth", authRoute);
+
+
+app.use("/add-to-watchlist", watchList);
 
 // Dynamic endpoint for movie and TV show details
 app.get("/detail/:type/:id", async (req, res) => {

@@ -18,7 +18,7 @@ export default function NavBar() {
                  <svg className="icon extra-stroke" width="64px" height="64px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#576B87"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><circle cx="32" cy="32" r="24"></circle><polyline points="28 40 36 32 28 24"></polyline></g></svg>
             )},
             
-      {text: "Anime", icon: (
+      {text: "Dashboard", icon: (
                 <svg className="icon extra-stroke" 
                 width="64px" 
                 height="64px" 
@@ -102,7 +102,7 @@ export default function NavBar() {
             position: "absolute",
             left: tooltip.position.x,
             top: tooltip.position.y,
-            transform: "translateY(-50%)",
+            transform: "translateY(-620%)",
             background: "#2B2929",
             color: "#576B87",
             padding: "10px",

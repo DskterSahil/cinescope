@@ -288,3 +288,9 @@ body {
     margin-bottom: 30px;
     color: #576B87;
 }
+
+.watch-btn.added {
+  background-color: #4caf50; /* green */
+  cursor: default;
+  opacity: 0.8;
+}
